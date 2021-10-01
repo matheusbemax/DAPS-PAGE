@@ -785,7 +785,38 @@ div.percent h3 {
   color: white;
 }
 div.percent .percent-color {
-  background: red;
+  width: 100%;
+  height: 12px;
+  background: #ff698750;
+  border-radius: 10px;
+}
+div.percent .percent-color .color {
+  width: 25%;
+  background: #ff6987;
+  height: 12px;
+  border-radius: 10px;
+}
+div.percent .list-fundraising {
+  margin: 15px 0 0 0;
+  padding: 0;
+}
+div.percent .list-fundraising li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+
+  padding: 3px 0;
+}
+div.percent .list-fundraising li p.name {
+  color: white;
+  font-size: 18px;
+}
+
+div.percent .list-fundraising li p.value {
+  background: #ff6987;
+  padding: 0px 4px;
+  margin-left: 5px;
+  color: white;
 }
 
 div img.gem-icons {
@@ -852,6 +883,18 @@ div img.gems-in-container {
 @media all and (max-width: 767px) {
   .ugf-wraper .footer {
     width: 510px;
+  }
+  div.percent .list-fundraising li p.name {
+    color: white;
+    font-size: 12px;
+  }
+
+  div.percent .list-fundraising li p.value {
+    background: #ff6987;
+    font-size: 12px;
+    padding: 0 2px;
+    margin-left: 5px;
+    color: white;
   }
 }
 
