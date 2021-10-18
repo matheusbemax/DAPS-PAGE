@@ -25,7 +25,7 @@
               adipisicing elit. Tempora non aliquam inventore!
             </p>
           </div>
-          <h2>DAPS GEMS</h2>
+          <h2 class="daps-gem">DAPS GEMS</h2>
 
           <div class="gems-container">
             <div class="gems-content">
@@ -78,23 +78,6 @@
             </div>
           </div>
 
-          <div class="icons-container">
-            <img
-              src="../public/images/media-facebook.png"
-              class="icon-media"
-              alt=""
-            />
-            <img
-              src="../public/images/media-insta.png"
-              class="icon-media"
-              alt=""
-            />
-            <img
-              src="../public/images/media-whatsapp.png"
-              class="icon-media"
-              alt=""
-            />
-          </div>
         </div>
       </div>
 
@@ -114,23 +97,39 @@
               <span
                 data-action="click->donation#handleAmountClick"
                 id="amount-value"
-                >$25</span
+              >
+                <img src="../public/images/gems/Be a gem-05.png" alt="" />
+                $5</span
               >
               <span
                 data-action="click->donation#handleAmountClick"
                 id="amount-value"
-                >$50</span
+                >
+                <img src="../public/images/gems/Be a gem-04.png" alt="" />
+                $25</span
               >
               <span
                 data-action="click->donation#handleAmountClick"
                 id="amount-value"
-                >$100</span
+                >
+                                <img src="../public/images/gems/Be a gem-03.png" alt="" />
+                $50</span
               >
               <span
                 data-action="click->donation#handleAmountClick"
                 id="amount-value"
-                >$500</span
+                >
+                                <img src="../public/images/gems/Be a gem-02.png" alt="" />
+                $75</span
               >
+                            <span
+                data-action="click->donation#handleAmountClick"
+                id="amount-value"
+                >
+                                <img src="../public/images/gems/Be a gem-01.png" alt="" />
+                $100</span
+              >
+              
             </div>
             <p class="error-donation-value"></p>
           </div>
@@ -139,9 +138,9 @@
             <label for="custom-donation">OR, Type Custom amount</label>
             <div class="input-group">
               <div class="input-group-prepend">
-                <span class="input-group-text" id="validatedInputGroupPrepend"
-                  >$</span
-                >
+                <span class="input-group-text" id="validatedInputGroupPrepend"></span>
+                  <img src="../public/images/gems/Be a gem-06.png" alt=""
+                /></span>
               </div>
               <input
                 type="text"
@@ -350,7 +349,7 @@
         <div class="alternet-payment">
           <a href="#" class="btn"
             >Donate with
-            <img src="public/images/paypal.png" class="img-fluid" alt=""
+            <img src="../public/images/paypal.png" class="img-fluid" alt=""
           /></a>
         </div>
       </div>

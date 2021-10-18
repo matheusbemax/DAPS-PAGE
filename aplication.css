@@ -16,7 +16,7 @@ button {
   font-family: "Roboto", sans-serif;
   display: grid;
   grid-template-columns: 1.05fr 2fr;
-  background-image: url(/public/images/background.jpg);
+  background-image: url(/public/background.jpg);
   background-size: cover;
 }
 

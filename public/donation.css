@@ -37,7 +37,12 @@ div.fixed {
 div.fixed div h1 {
   color: white;
   margin: 30px 0;
-  font-size: 38px;
+  font-size: 46px;
+}
+
+.daps-gem {
+  font-size: 30px;
+  margin: 10px 0;
 }
 
 div.fixed div p.subtitle-fixed {
@@ -116,6 +121,14 @@ div.header-title-donation p {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-donation div.amount-select .amount-preset span img {
+  width: 32px;
+  height: 28px;
+  margin-right: 5px;
 }
 .form-block .amount-select .amount-preset span:last-child {
   margin-right: 0;
@@ -149,6 +162,10 @@ div.form-group label {
   align-items: center;
   font-size: 1.8rem;
   justify-content: center;
+}
+.input-group .input-group-prepend img {
+  width: 32px;
+  height: 28px;
 }
 .input-group .form-control {
   max-width: 200px;
