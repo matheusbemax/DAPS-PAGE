@@ -4,35 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" type="text/css" href="../public/main.css" />
     <link rel="stylesheet" type="text/css" href="../public/donation.css" />
     <title>Document</title>
   </head>
 
   <body>
-    <div class="container-donation" data-controller="donation">
+    <div class="container-donation">
       <div class="header-donation">
         <div class="fixed">
           <a href="/">
-            <img src="../public/images/logo-2.png" class="logo" alt=""
+            <img
+              src="/public/logo.png"
+              class="logo"
+              alt="logo dallas area parkinson society"
           /></a>
 
           <div class="header-content-fixed">
             <h1>Memorial and Honor</h1>
-            <p class="subtitle-fixed">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-              non aliquam inventore! Iusto error natus a, quos cumque sapiente,
-              veritatis reiciendis pariatur Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Tempora non aliquam inventore! Iusto
-              error natus a,
-            </p>
-
-            <p class="subtitle-fixed">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-              non aliquam inventore! Iusto error natus a, quos cumque sapiente,
-              veritatis reiciendis pariatur Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Tempora non aliquam inventore! Iusto
-              error natus a,
+            <p class="subtitle-fixed pt-20">
+              Your gift in honor or in memory of someone special will help us
+              help those affected by Parkinson's disease.
             </p>
           </div>
         </div>
@@ -43,36 +41,56 @@
           <h2>Memorial and Honor</h2>
           <p>1/3</p>
         </div>
-        <form action="/donation-complete" class="form-donation">
+        <form
+          action="/donation-complete"
+          class="form-donation"
+          data-controller="donations"
+        >
           <div class="amount-select">
             <label for="#">Select amount</label>
             <div class="amount-preset span">
               <span
                 data-action="click->donation#handleAmountClick"
+                class="amount-value"
                 id="amount-value"
-                >$25</span
+              >
+                $5</span
               >
               <span
                 data-action="click->donation#handleAmountClick"
+                class="amount-value"
                 id="amount-value"
-                >$50</span
+              >
+                $25</span
               >
               <span
                 data-action="click->donation#handleAmountClick"
+                class="amount-value"
                 id="amount-value"
-                >$100</span
+              >
+                $50</span
               >
               <span
                 data-action="click->donation#handleAmountClick"
+                class="amount-value"
                 id="amount-value"
-                >$500</span
+              >
+                $75</span
+              >
+              <span
+                data-action="click->donation#handleAmountClick"
+                class="amount-value"
+                id="amount-value"
+              >
+                $100</span
               >
             </div>
             <p class="error-donation-value"></p>
           </div>
 
           <div class="form-group" id="value-container">
-            <label for="custom-donation">OR, Type Custom amount</label>
+            <label> OR TYPE A CUSTOM AMOUNT </label>
+
             <div class="input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="validatedInputGroupPrepend"
@@ -89,153 +107,332 @@
               />
             </div>
           </div>
-          <div class="form-group donation-period"></div>
-          <div class="col-sm-9 delet-margin">
+
+          <div class="form-group">
+            <input type="checkbox" />
+            <label>I want to contribute this amount every</label>
+            <input class="form-control" type="number" min="0" />
+            <select name="" class="form-control" id="">
+              <option value="">years(s)</option>
+              <option value="">month(s)</option>
+            </select>
+          </div>
+
+          <div class="checkbox-field">
+            <input onclick="toggleModal()" type="checkbox" />
+            <label>I am contributing on behalf of an organization.</label>
+          </div>
+
+          <div class="modal-closed modal-checkbox">
+            <div class="header-title-donation">
+              <h2>Organization Details</h2>
+            </div>
+
             <div
-              class="form-group email-container"
-              data-donation-target="emailContainer"
+              class="form-group one-col one-collumn email-container"
+              data-donations-target="emailContainer"
             >
-              <label for="fName">Email</label>
+              <label>Organization Name * </label>
+              <input
+                class="form-control one-collumn"
+                placeholder="Organization Name"
+              />
+            </div>
+
+            <div
+              class="form-group one-col one-collumn email-container"
+              data-donations-target="emailContainer"
+            >
+              <label>Phone</label>
+              <input
+                class="form-control one-collumn"
+                placeholder="Organization Phone"
+              />
+            </div>
+
+            <div
+              class="form-group one-col one-collumn email-container"
+              data-donations-target="emailContainer"
+            >
+              <label>Address</label>
+              <input
+                class="form-control one-collumn"
+                placeholder="Organization Address"
+              />
+            </div>
+
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="form-group one-col one-collumn" id="city-container">
+                  <label for="inputCity">Your City</label>
+                  <input
+                    type="text"
+                    class="form-control one-collumn"
+                    id="City"
+                    placeholder="e.g. New York"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div
+                  class="form-group one-col one-collumn"
+                  id="state-container"
+                >
+                  <label for="state">Your state</label>
+                  <input
+                    class="form-control one-collumn"
+                    placeholder="e.g. New York"
+                    data-donations-target="inputState"
+                  />
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div
+                  class="form-group one-col one-collumn"
+                  id="state-container"
+                >
+                  <label for="state">Your country</label>
+                  <input
+                    class="form-control one-collumn"
+                    placeholder="e.g. New York"
+                    data-donations-target="inputState"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="form-group one-collumn">
+                <label for="zip_code">POSTAL CODE</label>
+                <input
+                  class="form-control one-collumn"
+                  placeholder="E.g. 0000"
+                  data-donations-target="inputZipCode"
+                />
+              </div>
+            </div>
+
+            <div
+              class="form-group one-col one-collumn email-container"
+              data-donations-target="emailContainer"
+            >
+              <label>Organization Email * </label>
+              <input
+                class="form-control one-collumn"
+                placeholder="Email@example.com"
+              />
+            </div>
+          </div>
+
+          <div class="form-steps active">
+            <div class="form-block">
+              <div class="header-title-donation">
+                <h2>Donation Information</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div
+              class="form-group one-col one-collumn email-container"
+              data-donations-target="emailContainer"
+            >
+              <p>
+                Please list the name(s) of the donor(s) as you would like them
+                to appear in the acknowledgment letter and in our newsletter
+                "Honors and Memorials" section.
+              </p>
+              <label for="fName">From *</label>
               <input
                 type="text"
                 class="form-control"
                 id="Email"
-                placeholder="YourE-mail@example.com"
+                placeholder="brother"
                 data-donation-target="inputEmail"
               />
             </div>
           </div>
+          <div class="row">
+            <div
+              class="form-group one-col one-collumn email-container"
+              data-donations-target="emailContainer"
+            >
+              <label for="fName">In honor of *</label>
+              <input
+                type="text"
+                class="form-control"
+                id="Email"
+                placeholder="John"
+                data-donation-target="inputEmail"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div
+              class="form-group one-col one-collumn email-container"
+              data-donations-target="emailContainer"
+            >
+              <label for="fName">In memory of *</label>
+              <input
+                type="text"
+                class="form-control"
+                id="Email"
+                placeholder="John"
+                data-donation-target="inputEmail"
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group one-collumn">
+              <label for="memory"
+                >Please send acknowledgment of this donation to: *</label
+              >
+              <textarea
+                name="memory"
+                id=""
+                cols="30"
+                class="one-collumn"
+                rows="10"
+              ></textarea>
+
+              <p>
+                Please list the name(s) and address(es) above to which you would
+                like us to send an acknowledgment letter (e.g. to the honoree or
+                a memorial family member). No dollar amount will be specified in
+                this letter.
+              </p>
+            </div>
+          </div>
+
           <div class="form-steps active">
             <div class="form-block">
               <div class="header-title-donation">
-                <h2>Billing Details</h2>
-                <p>1/3</p>
+                <h2>Billing Name and Address</h2>
+                <p>2/4</p>
               </div>
-            </div>
-          </div>
-          <div class="row">
-            <div>
-              <div
-                class="form-group name-container col-double"
-                id="name-container"
-                data-donation-target="nameContainer"
-              >
-                <label for="fName">First Name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="Name"
-                  placeholder="John"
-                  data-donation-target="inputName"
-                />
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div
-                class="form-group col-double"
-                id="lastName-container"
-                data-donation-target="lastNameContainer"
-              >
-                <label for="lName">Last Name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="lastName"
-                  placeholder="Doe"
-                  data-donation-target="inputLastName"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="form-group country-select">
-            <label for="inputCountry">Your Country</label>
-            <div class="select-input choose-country">
-              <span></span>
-              <select id="inputCountry" class="form-control">
-                <option value="">Country</option>
-                <option value="">USA</option>
-                <option value="">Russia</option>
-                <option value="">China</option>
-                <option value="">England</option>
-                <option value="">France</option>
-                <option value="">Germany</option>
-                <option value="">Spain</option>
-                <option value="">Netherland</option>
-                <option value="">Singapur</option>
-              </select>
             </div>
           </div>
 
-          <div class="form-group one-col one-collumn" id="city-container">
-            <label for="inputCity">Your City</label>
-            <input
-              type="text"
-              class="form-control one-collumn"
-              id="City"
-              placeholder="e.g. New York"
-            />
+          <div class="col-sm-6">
+            <div
+              class="form-group name-container one-collumn"
+              id="name-container"
+              data-donations-target="firstNameContainer"
+            >
+              <label for="fName">Billing First Name * </label>
+              <input
+                type="text"
+                class="form-control one-collumn"
+                id="Name"
+                placeholder="John"
+                data-donation-target="inputName"
+              />
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div
+              class="form-group name-container one-collumn"
+              id="name-container"
+              data-donations-target="lastNameContainer"
+            >
+              <label for="lName">Billing Middle Name </label>
+              <input
+                type="text"
+                class="form-control one-collumn"
+                id="lastName"
+                placeholder="Doe"
+                data-donation-target="inputLastName"
+              />
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div
+              class="form-group name-container one-collumn"
+              id="name-container"
+              data-donations-target="lastNameContainer"
+            >
+              <label for="lName">Billing Last Name * </label>
+              <input
+                type="text"
+                class="form-control one-collumn"
+                id="lastName"
+                placeholder="Doe"
+                data-donation-target="inputLastName"
+              />
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group one-collumn">
+              <label for="address2">Street Address *</label>
+              <input
+                type="text"
+                class="form-control one-collumn"
+                id="address2"
+                placeholder="e.g. Los Angeles, CA 900"
+              />
+            </div>
           </div>
 
           <div class="row">
-            <div class="col-sm-6">
-              <div class="form-group col-double">
-                <label for="address1">Address Line 1</label>
+            <div class="col-sm-4">
+              <div class="form-group one-col one-collumn" id="city-container">
+                <label for="inputCity">Your City * </label>
                 <input
                   type="text"
-                  class="form-control"
-                  id="address1"
-                  placeholder="e.g. 2707 Par Drive"
+                  class="form-control one-collumn"
+                  id="City"
+                  placeholder="e.g. New York"
                 />
               </div>
             </div>
-            <div class="col-sm-6">
-              <div class="form-group col-double">
-                <label for="address2">Address Line 2</label>
+            <div class="col-sm-4">
+              <div class="form-group one-col one-collumn" id="state-container">
+                <label for="state">Your state * </label>
                 <input
-                  type="text"
-                  class="form-control"
-                  id="address2"
-                  placeholder="e.g. Los Angeles, CA 900"
+                  class="form-control one-collumn"
+                  placeholder="e.g. New York"
+                  data-donations-target="inputState"
                 />
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="form-group col-double">
-                <label for="inputPost">Post Code</label>
+
+            <div class="col-sm-4">
+              <div class="form-group one-col one-collumn" id="state-container">
+                <label for="state">Your country * </label>
                 <input
-                  type="text"
-                  class="form-control"
-                  id="inputPost"
-                  placeholder="E.g. 0000"
-                />
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="form-group col-double">
-                <label for="inputPhone"
-                  >Phone Number <span class="lite">(Optional)</span></label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="inputPhone"
-                  placeholder="E.g. 000 0000 0000"
+                  class="form-control one-collumn"
+                  placeholder="e.g. New York"
+                  data-donations-target="inputState"
                 />
               </div>
             </div>
           </div>
+
+          <div class="col-sm-6">
+            <div class="form-group col-double one-collumn">
+              <label for="zip_code">POSTAL CODE * </label>
+              <input
+                class="form-control one-collumn"
+                placeholder="E.g. 0000"
+                data-donations-target="inputZipCode"
+              />
+            </div>
+          </div>
+
           <div class="form-steps active">
             <div class="form-block">
               <div class="header-title-donation">
                 <h2>Payment Method</h2>
-                <p>3/3</p>
+                <p>4/4</p>
               </div>
             </div>
           </div>
           <div class="form-group one-collumn">
-            <label for="inputCard">Card Number</label>
+            <label for="inputCard">Card Number * </label>
             <input
               type="text"
               class="form-control one-collumn"
@@ -244,7 +441,7 @@
             />
           </div>
           <div class="form-group one-collumn">
-            <label for="inputHolder">Cardholder name</label>
+            <label for="inputHolder">Cardholder name * </label>
             <input
               type="text"
               class="form-control one-collumn"
@@ -255,7 +452,7 @@
           <div class="row">
             <div class="col-sm-6">
               <div class="form-group col-double">
-                <label for="inputExpire">Expiry date</label>
+                <label for="inputExpire">Expiration date * </label>
                 <input
                   type="text"
                   class="form-control"
@@ -266,7 +463,7 @@
             </div>
             <div class="col-sm-6">
               <div class="form-group col-double">
-                <label for="inputCCV">CCV Code</label>
+                <label for="inputCCV">CCV Code * </label>
                 <input
                   type="text"
                   class="form-control"
@@ -276,8 +473,9 @@
               </div>
             </div>
           </div>
+
           <button class="btn btn-100" data-action="donation#btnSubmitForm">
-            Send Your Donation &nbsp; &#10084;
+            Confirm Donation &nbsp; &#10084;
           </button>
         </form>
         <div class="ugf-block-separator">
@@ -286,10 +484,17 @@
         <div class="alternet-payment">
           <a href="#" class="btn"
             >Donate with
-            <img src="../public/images/paypal.png" class="img-fluid" alt=""
+            <img
+              src="/public/images/paypal.png"
+              class="img-fluid"
+              alt="paypal payment donation"
           /></a>
         </div>
       </div>
     </div>
+    <script src="/public/js/jquery.min.js"></script>
+    <script src="/public/js/popper.min.js"></script>
+    <script src="/public/js/bootstrap.min.js"></script>
+    <script src="/scripts/script.js"></script>
   </body>
 </html>

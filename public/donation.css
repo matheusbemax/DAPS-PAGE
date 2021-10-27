@@ -25,7 +25,7 @@ div.fixed {
 
   flex-direction: column;
 
-  padding: 30px;
+  padding: 0px 30px;
   color: white;
 }
 .header-content-fixed {
@@ -48,6 +48,10 @@ div.fixed div h1 {
 div.fixed div p.subtitle-fixed {
   color: white;
   margin: 10px 0;
+}
+
+div.fixed div p.pt-20 {
+  font-size: 20px;
 }
 div.fixed img.logo {
   width: 220px;
@@ -88,20 +92,20 @@ div.header-title-donation p {
   color: #b2becc;
   font-weight: bold;
 }
-.form-donation div.amount-select label {
+div.amount-select label {
   font-weight: bold;
 
   text-transform: uppercase;
   font-size: 12px;
 }
-.form-donation div.amount-select .amount-preset {
+div.amount-select .amount-preset {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-.form-donation div.amount-select .amount-preset span {
+div.amount-select .amount-preset span {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 100px;
   flex: 0 0 100px;
@@ -125,7 +129,7 @@ div.header-title-donation p {
   align-items: center;
   justify-content: center;
 }
-.form-donation div.amount-select .amount-preset span img {
+div.amount-select .amount-preset span img {
   width: 32px;
   height: 28px;
   margin-right: 5px;
@@ -133,10 +137,38 @@ div.header-title-donation p {
 .form-block .amount-select .amount-preset span:last-child {
   margin-right: 0;
 }
-.form-donation div.amount-select .amount-preset span.activeValue {
+div.amount-select .amount-preset span.activeValue {
   background: #ff6987 !important;
-  color: #ffffff;
+  color: white !important;
   border-color: #ff6987;
+}
+div.amount-select div.div-amount {
+  margin-right: 15px;
+}
+span.container-amount {
+  margin: 0 !important;
+}
+div.amount-select div.div-amount .container-amount {
+  -ms-flex: 0 0 100px;
+  flex: 0 0 100px;
+  background: #ffffff;
+  width: 100px;
+  height: 65px;
+
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: #b2becc;
+  line-height: 65px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 div.form-group label {
   text-transform: uppercase;
@@ -221,7 +253,7 @@ div.form-group label {
 .form-group {
   margin: 10px 0;
 }
-.form-donation .btn {
+.btn {
   height: 60px;
   width: 100%;
   text-align: center;
@@ -325,22 +357,21 @@ div.gems-container {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 8px;
 }
 div.gems-container div.gems-content {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 div.gems-container div.gems-content p {
-  font-size: 14px;
+  font-size: 12px;
   color: white;
 }
 div img.gems-in-container {
-  width: 55px;
+  width: 70px;
   height: 48px;
-
-  margin-bottom: 25px;
+  margin-right: 6px;
 }
 p.error-input {
   color: rgb(245, 79, 79);
@@ -393,6 +424,10 @@ div.ugf-bg .final-content .btn {
   border-radius: 8px;
   font-size: 21px;
   margin-top: 10px;
+}
+
+div.modal-closed {
+  display: none;
 }
 
 @media (max-width: 700px) {

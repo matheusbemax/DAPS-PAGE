@@ -4,143 +4,167 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" type="text/css" href="../public/main.css" />
     <link rel="stylesheet" type="text/css" href="../public/donation.css" />
     <title>Document</title>
   </head>
 
   <body>
-    <div class="container-donation" data-controller="donation">
+    <div class="container-donation" data-controller="donations">
       <div class="header-donation">
         <div class="fixed">
           <a href="/">
-            <img src="../public/images/logo-2.png" class="logo" alt=""
+            <img
+              src="/public/logo.png"
+              class="logo"
+              alt="logo dallas area parkinson society"
           /></a>
-
+          <h2>DAPS GEM</h2>
           <div class="header-content-fixed gem-header">
-            <h1>Be A Gem</h1>
             <p class="subtitle-fixed">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-              non aliquam inventore Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Tempora non aliquam inventore!
+              Dallas Area Parkinsonism Society (DAPS) GEMs are donors who Give
+              Every Month. Our GEMs are very valuable! DAPS provides free
+              programs and services to all people affected by Parkinson’s
+              disorders, such as Parkinson's disease (PD), PSP, CBD, MSA, and
+              DLB. Monthly donations are vital for funding these services.
             </p>
           </div>
-          <h2 class="daps-gem">DAPS GEMS</h2>
 
           <div class="gems-container">
             <div class="gems-content">
-              <p>DIAMOND</p>
               <img
-                src="../public/images/gems/Be a gem-01.png"
+                src="/public/images/gems/Be a gem-01.png"
                 class="gems-in-container"
                 alt=""
               />
+              <p>
+                Diamond $100+: Your gift of $100 or more per month will pay for
+                a full year’s worth of fees for the space where we provide our
+                monthly educational/inspirational meetings.
+              </p>
             </div>
             <div class="gems-content">
-              <p>RUBY</p>
               <img
-                src="../public/images/gems/Be a gem-02.png"
+                src="/public/images/gems/Be a gem-02.png"
                 class="gems-in-container"
                 alt=""
               />
+              <p>
+                Ruby $75-$99: Your gift of $74 to $99 per month will pay for one
+                care partner support group each month - a lifeline for
+                caregivers.
+              </p>
             </div>
             <div class="gems-content">
-              <p>ESMERALD</p>
               <img
-                src="../public/images/gems/Be a gem-03.png"
+                src="/public/images/gems/Be a gem-03.png"
                 class="gems-in-container"
                 alt=""
               />
+              <p>
+                Emerald $50-$74: Your gift of $50 to $74 per month will pay for
+                one exercise group each month - enhancing strength and balance
+                for people with PD.
+              </p>
             </div>
             <div class="gems-content">
-              <p>SAPPHIRE</p>
               <img
-                src="../public/images/gems/Be a gem-04.png"
+                src="/public/images/gems/Be a gem-04.png"
                 class="gems-in-container"
                 alt=""
               />
+              <p>
+                Sapphire $25-$49: Your gift of $25 to $49 per month will provide
+                for one Dance for Movement Disorders class each month - a
+                musical alternative for regular exercise.
+              </p>
             </div>
             <div class="gems-content">
-              <p>AMETHYST</p>
               <img
-                src="../public/images/gems/Be a gem-05.png"
+                src="/public/images/gems/Be a gem-05.png"
                 class="gems-in-container"
                 alt=""
               />
-            </div>
-            <div class="gems-content">
-              <p>STONE</p>
-              <img
-                src="../public/images/gems/Be a gem-06.png"
-                class="gems-in-container"
-                alt=""
-              />
+              <p>
+                Amethyst $5-$24: Your gift of $5 to $24 per month will provide
+                funds for equipment for our 10+ weekly exercise groups
+                specifically for people with Parkinson’s.
+              </p>
             </div>
           </div>
-
         </div>
       </div>
-
       <div class="content-form-donation">
         <div class="header-title-donation">
-          <h2>Annual Membership</h2>
+          <h2>Contribution Amount</h2>
           <p>1/3</p>
         </div>
         <form
           action="/donation-complete"
           class="form-donation"
-          data-controller="donation"
+          data-controller="donations"
         >
           <div class="amount-select">
             <label for="#">Select amount</label>
             <div class="amount-preset span">
               <span
-                data-action="click->donation#handleAmountClick"
+                data-action="click->donations#handleAmountClick"
+                class="amount-value"
                 id="amount-value"
               >
-                <img src="../public/images/gems/Be a gem-05.png" alt="" />
+                <img src="/public/images/gems/Be a gem-05.png" alt="" />
                 $5</span
               >
               <span
-                data-action="click->donation#handleAmountClick"
+                data-action="click->donations#handleAmountClick"
+                class="amount-value"
                 id="amount-value"
-                >
-                <img src="../public/images/gems/Be a gem-04.png" alt="" />
+              >
+                <img src="/public/images/gems/Be a gem-04.png" alt="" />
                 $25</span
               >
               <span
-                data-action="click->donation#handleAmountClick"
+                data-action="click->donations#handleAmountClick"
+                class="amount-value"
                 id="amount-value"
-                >
-                                <img src="../public/images/gems/Be a gem-03.png" alt="" />
+              >
+                <img src="/public/images/gems/Be a gem-03.png" alt="" />
                 $50</span
               >
               <span
-                data-action="click->donation#handleAmountClick"
+                data-action="click->donations#handleAmountClick"
+                class="amount-value"
                 id="amount-value"
-                >
-                                <img src="../public/images/gems/Be a gem-02.png" alt="" />
+              >
+                <img src="/public/images/gems/Be a gem-02.png" alt="" />
                 $75</span
               >
-                            <span
-                data-action="click->donation#handleAmountClick"
+              <span
+                data-action="click->donations#handleAmountClick"
+                class="amount-value"
                 id="amount-value"
-                >
-                                <img src="../public/images/gems/Be a gem-01.png" alt="" />
+              >
+                <img src="/public/images/gems/Be a gem-01.png" alt="" />
                 $100</span
               >
-              
             </div>
             <p class="error-donation-value"></p>
           </div>
 
           <div class="form-group" id="value-container">
-            <label for="custom-donation">OR, Type Custom amount</label>
+            <label> OR TYPE A CUSTOM AMOUNT </label>
+
             <div class="input-group">
               <div class="input-group-prepend">
-                <span class="input-group-text" id="validatedInputGroupPrepend"></span>
-                  <img src="../public/images/gems/Be a gem-06.png" alt=""
-                /></span>
+                <span class="input-group-text" id="validatedInputGroupPrepend"
+                  >$</span
+                >
               </div>
               <input
                 type="text"
@@ -148,157 +172,289 @@
                 id="donate-value"
                 aria-describedby="validatedInputGroupPrepend"
                 placeholder="0.00"
-                data-donation-target="inputs inputAmount"
+                data-donations-target="inputs inputAmount"
+                data-action="donations#amountValueDonation"
               />
             </div>
           </div>
-          <div class="form-group donation-period"></div>
-          <div class="col-sm-9 delet-margin">
+          <div class="checkbox-field">
+            <input onclick="toggleModal()" type="checkbox" />
+            <label>I am contributing on behalf of an organization.</label>
+          </div>
+
+          <div
+            class="modal-closed modal-checkbox"
+            data-donations-target="modalCheckbox"
+          >
+            <div class="header-title-donation">
+              <h2>Organization Details</h2>
+            </div>
+
             <div
-              class="form-group email-container"
-              data-donation-target="emailContainer"
+              class="form-group one-col one-collumn email-container"
+              data-donations-target="emailContainer"
             >
-              <label for="fName">Email</label>
+              <label>Organization Name * </label>
               <input
-                type="text"
-                class="form-control"
-                id="Email"
-                placeholder="YourE-mail@example.com"
-                data-donation-target="inputEmail"
+                class="form-control one-collumn"
+                placeholder="Organization Name"
               />
             </div>
-          </div>
-          <div class="form-steps active">
-            <div class="form-block">
-              <div class="header-title-donation">
-                <h2>Billing Details</h2>
-                <p>1/3</p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div>
-              <div
-                class="form-group name-container col-double"
-                id="name-container"
-                data-donation-target="nameContainer"
-              >
-                <label for="fName">First Name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="Name"
-                  placeholder="John"
-                  data-donation-target="inputName"
-                />
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div
-                class="form-group col-double"
-                id="lastName-container"
-                data-donation-target="lastNameContainer"
-              >
-                <label for="lName">Last Name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="lastName"
-                  placeholder="Doe"
-                  data-donation-target="inputLastName"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="form-group country-select">
-            <label for="inputCountry">Your Country</label>
-            <div class="select-input choose-country">
-              <span></span>
-              <select id="inputCountry" class="form-control">
-                <option value="">Country</option>
-                <option value="">USA</option>
-                <option value="">Russia</option>
-                <option value="">China</option>
-                <option value="">England</option>
-                <option value="">France</option>
-                <option value="">Germany</option>
-                <option value="">Spain</option>
-                <option value="">Netherland</option>
-                <option value="">Singapur</option>
-              </select>
-            </div>
-          </div>
 
-          <div class="form-group one-col one-collumn" id="city-container">
-            <label for="inputCity">Your City</label>
-            <input
-              type="text"
-              class="form-control one-collumn"
-              id="City"
-              placeholder="e.g. New York"
-            />
-          </div>
+            <div
+              class="form-group one-col one-collumn email-container"
+              data-donations-target="emailContainer"
+            >
+              <label>Phone</label>
+              <input
+                class="form-control one-collumn"
+                placeholder="Organization Phone"
+              />
+            </div>
 
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="form-group col-double">
-                <label for="address1">Address Line 1</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="address1"
-                  placeholder="e.g. 2707 Par Drive"
-                />
+            <div
+              class="form-group one-col one-collumn email-container"
+              data-donations-target="emailContainer"
+            >
+              <label>Address</label>
+              <input
+                class="form-control one-collumn"
+                placeholder="Organization Address"
+              />
+            </div>
+
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="form-group one-col one-collumn" id="city-container">
+                  <label for="inputCity">Your City</label>
+                  <input
+                    type="text"
+                    class="form-control one-collumn"
+                    id="City"
+                    placeholder="e.g. New York"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div
+                  class="form-group one-col one-collumn"
+                  id="state-container"
+                >
+                  <label for="state">Your state</label>
+                  <input
+                    class="form-control one-collumn"
+                    placeholder="e.g. New York"
+                  />
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div
+                  class="form-group one-col one-collumn"
+                  id="state-container"
+                >
+                  <label for="state">Your country</label>
+                  <input
+                    class="form-control one-collumn"
+                    placeholder="e.g. New York"
+                  />
+                </div>
               </div>
             </div>
+
             <div class="col-sm-6">
-              <div class="form-group col-double">
-                <label for="address2">Address Line 2</label>
+              <div class="form-group one-collumn">
+                <label for="zip_code">POSTAL CODE</label>
                 <input
-                  type="text"
-                  class="form-control"
-                  id="address2"
-                  placeholder="e.g. Los Angeles, CA 900"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="form-group col-double">
-                <label for="inputPost">Post Code</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="inputPost"
+                  class="form-control one-collumn"
                   placeholder="E.g. 0000"
                 />
               </div>
             </div>
-            <div class="col-sm-6">
-              <div class="form-group col-double">
-                <label for="inputPhone"
-                  >Phone Number <span class="lite">(Optional)</span></label
-                >
+
+            <div
+              class="form-group one-col one-collumn email-container"
+              data-donations-target="emailContainer"
+            >
+              <label>Organization Email * </label>
+              <input
+                class="form-control one-collumn"
+                placeholder="Email@example.com"
+              />
+            </div>
+          </div>
+
+          <div class="form-steps active">
+            <div class="form-block">
+              <div class="header-title-donation">
+                <h2>Billing Name and Address</h2>
+                <p>2/3</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div
+              class="form-group one-col one-collumn email-container"
+              data-donations-target="emailContainer"
+            >
+              <label for="fName">Email * </label>
+              <input
+                type="text"
+                class="form-control"
+                id="Email"
+                placeholder="Email@example.com"
+                data-donations-target="inputEmail"
+              />
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div
+              class="form-group name-container one-collumn"
+              id="name-container"
+              data-donations-target="firstNameContainer"
+            >
+              <label for="fName">Billing First Name * </label>
+              <input
+                type="text"
+                class="form-control one-collumn"
+                id="Name"
+                placeholder="John"
+                data-donations-target="inputName"
+              />
+            </div>
+          </div>
+
+          <div class="col-sm-6 one-collumn">
+            <div
+              class="form-group name-container one-collumn"
+              id="name-container"
+              data-donations-target="firstNameContainer"
+            >
+              <label for="fName">Billing Middle Name</label>
+              <input
+                type="text"
+                class="form-control one-collumn"
+                id="Name"
+                placeholder="John"
+                data-donations-target="inputName"
+              />
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div
+              class="form-group name-container one-collumn"
+              id="name-container"
+              data-donations-target="lastNameContainer"
+            >
+              <label for="lName">Billing Last Name * </label>
+              <input
+                type="text"
+                class="form-control one-collumn"
+                id="lastName"
+                placeholder="Doe"
+                data-donations-target="inputLastName"
+              />
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group one-col one-collumn">
+              <label for="address1">Street Address *</label>
+              <input
+                type="text"
+                class="form-control one-collumn"
+                id="address1"
+                placeholder="e.g. 2707 Par Drive"
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="form-group one-col one-collumn" id="city-container">
+                <label for="inputCity">Your City * </label>
                 <input
                   type="text"
-                  class="form-control"
-                  id="inputPhone"
-                  placeholder="E.g. 000 0000 0000"
+                  class="form-control one-collumn"
+                  id="City"
+                  placeholder="e.g. New York"
+                />
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group one-col one-collumn" id="state-container">
+                <label for="state">Your state * </label>
+                <input
+                  class="form-control one-collumn"
+                  placeholder="e.g. New York"
+                  data-donations-target="inputState"
+                />
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="form-group one-col one-collumn" id="state-container">
+                <label for="state">Your country * </label>
+                <input
+                  class="form-control one-collumn"
+                  placeholder="e.g. New York"
+                  data-donations-target="inputState"
                 />
               </div>
             </div>
           </div>
+
+          <div class="col-sm-6">
+            <div class="form-group one-collumn">
+              <label for="zip_code">POSTAL CODE * </label>
+              <input
+                class="form-control one-collumn"
+                placeholder="E.g. 0000"
+                data-donations-target="inputZipCode"
+              />
+            </div>
+          </div>
+
+          <div class="form-steps active">
+            <div class="form-block">
+              <div class="header-title-donation">
+                <h2>Acknowledgment</h2>
+                <p>3/4</p>
+              </div>
+              <div class="row">
+                <div
+                  class="form-group one-col one-collumn email-container"
+                  data-donations-target="emailContainer"
+                >
+                  <p>
+                    Please list the donor name(s) as they should be listed in
+                    our newsletter. If you would like to remain anonymous, just
+                    put Anonymous.
+                  </p>
+                  <label for="fName">GEM NAME * </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="Email"
+                    placeholder="Jhon"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="form-steps active">
             <div class="form-block">
               <div class="header-title-donation">
                 <h2>Payment Method</h2>
-                <p>3/3</p>
+                <p>4/4</p>
               </div>
             </div>
           </div>
           <div class="form-group one-collumn">
-            <label for="inputCard">Card Number</label>
+            <label for="inputCard">Card Number * </label>
             <input
               type="text"
               class="form-control one-collumn"
@@ -307,7 +463,7 @@
             />
           </div>
           <div class="form-group one-collumn">
-            <label for="inputHolder">Cardholder name</label>
+            <label for="inputHolder">Cardholder name * </label>
             <input
               type="text"
               class="form-control one-collumn"
@@ -318,7 +474,7 @@
           <div class="row">
             <div class="col-sm-6">
               <div class="form-group col-double">
-                <label for="inputExpire">Expiry date</label>
+                <label for="inputExpire">Expiration date * </label>
                 <input
                   type="text"
                   class="form-control"
@@ -329,7 +485,7 @@
             </div>
             <div class="col-sm-6">
               <div class="form-group col-double">
-                <label for="inputCCV">CCV Code</label>
+                <label for="inputCCV">CCV Code * </label>
                 <input
                   type="text"
                   class="form-control"
@@ -339,8 +495,9 @@
               </div>
             </div>
           </div>
-          <button class="btn btn-100" data-action="donation#btnSubmitForm">
-            Send Your Donation &nbsp; &#10084;
+
+          <button class="btn btn-100" data-action="donations#btnSubmitForm">
+            Confirm Donation &nbsp; &#10084;
           </button>
         </form>
         <div class="ugf-block-separator">
@@ -349,10 +506,17 @@
         <div class="alternet-payment">
           <a href="#" class="btn"
             >Donate with
-            <img src="../public/images/paypal.png" class="img-fluid" alt=""
+            <img
+              src="../public/images/paypal.png"
+              class="img-fluid"
+              alt="paypal payment donation"
           /></a>
         </div>
       </div>
     </div>
+    <script src="/public/js/jquery.min.js"></script>
+    <script src="/public/js/popper.min.js"></script>
+    <script src="/public/js/bootstrap.min.js"></script>
+    <script src="/scripts/script.js"></script>
   </body>
 </html>
