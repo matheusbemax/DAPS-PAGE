@@ -352,26 +352,27 @@ div img.gem-icons {
   margin-right: 6px;
 }
 div.gems-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  gap: 8px;
+  flex-direction: column;
 }
 div.gems-container div.gems-content {
   display: flex;
-  justify-content: center;
   align-items: center;
+  margin-bottom: 3px;
 }
 div.gems-container div.gems-content p {
   font-size: 12px;
   color: white;
 }
-div img.gems-in-container {
-  width: 70px;
-  height: 48px;
+.gems-in-container {
+  height: auto;
+  width: 55px;
   margin-right: 6px;
+}
+
+.size-gem-6 {
+  height: 30px;
+  width: 50px;
 }
 p.error-input {
   color: rgb(245, 79, 79);
