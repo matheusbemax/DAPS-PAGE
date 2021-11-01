@@ -14,7 +14,7 @@ div.header-donation {
 div.fixed {
   display: flex;
   position: fixed;
-  background-image: url(/public/images/background.png);
+  background-image: url(/public/tulip.png);
   background-position-x: -600px;
   background-size: cover;
 
@@ -444,7 +444,10 @@ div.ugf-bg .final-content .btn {
 div.modal-closed {
   display: none;
 }
-
+span.gem-descript-value {
+  font-weight: bold;
+  font-size: 14px;
+}
 @media (max-width: 700px) {
   div.container-donation {
     display: flex;
