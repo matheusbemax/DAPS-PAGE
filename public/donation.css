@@ -451,6 +451,9 @@ div.modal-closed {
     flex-direction: column;
     background-position-x: 0px;
   }
+  ul.gem-list {
+    grid-template-columns: 1fr;
+  }
   div.fixed h1 {
     font-size: 24px;
   }
