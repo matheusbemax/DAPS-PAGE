@@ -14,7 +14,7 @@ div.header-donation {
 div.fixed {
   display: flex;
   position: fixed;
-  background-image: url(/public/tulip.png);
+  background-image: url(/public/images/background.png);
   background-position-x: -600px;
   background-size: cover;
 
@@ -28,6 +28,10 @@ div.fixed {
   padding: 0px 30px;
   color: white;
 }
+div#alter-background {
+  background-image: url(/public/tulip.png);
+}
+
 .header-content-fixed {
   margin-bottom: 70px;
 }
@@ -314,12 +318,12 @@ div.percent h3 {
 div.percent .percent-color {
   width: 100%;
   height: 12px;
-  background: #ff698750;
+  background: #1f28596c;
   border-radius: 10px;
 }
 div.percent .percent-color .color {
   width: 25%;
-  background: #ff6987;
+  background: #1f2859;
   height: 12px;
   border-radius: 10px;
 }
@@ -340,7 +344,7 @@ div.percent .list-fundraising li p.name {
 }
 
 div.percent .list-fundraising li p.value {
-  background: #ff6987;
+  background: #1f2859;
   padding: 0px 4px;
   margin-left: 5px;
   color: white;
